@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWA</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <h1>Image reshaping app</h1>
+    <a href="/gallery">Gallery</a>
+
+    <p>Upload an image, do a voice recording, and save it to the gallery.
+        Supported shapes: circle, square, triangle, star.
+    </p>
+
+    <button id="record-start">Start recording</button>
+    <span class="output"></span>
+
+    <input type="file" id="imageInput" accept="image/*">
+    <div id="imageContainer"></div>
+    <button id="saveButton">Save Image</button>
+
+    <script>
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('SW registered!', reg))
+          .catch(err => console.error('Error registering service worker', err));
+    </script>
+    <script src="speech.js"></script>
+</body>
+</html>

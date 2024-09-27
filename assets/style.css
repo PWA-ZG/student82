@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    margin-bottom: 15px;
+}
+
+input {
+    margin-bottom: 15px;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+button{
+    margin-bottom: 15px;
+}
+
+.output {
+    margin-bottom: 15px;
+}
+
+button {
+    margin-bottom: 15px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 50%;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 87px solid #3498db;
+}
+
+.star {
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: #3498db;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #3498db;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+}
+.star:before {
+    border-bottom: 80px solid #3498db;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+}
+.star:after {
+    position: absolute;
+    display: block;
+    color: #3498db;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid #3498db;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+}
